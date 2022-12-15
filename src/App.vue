@@ -1,6 +1,7 @@
 <template>
   <div>
-
+    <!-- 单标签写法 -->
+    <router-view/>
   </div>
 </template>
 
@@ -11,5 +12,4 @@ export default {
 </script>
 
 <style coped lang="less">
-
 </style>
