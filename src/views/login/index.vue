@@ -2,11 +2,12 @@
   <div class="login-container">
     <!-- 顶部标题 -->
     <van-nav-bar class="page-top-bar" title="登录" >
-    <van-icon slot="left" class="top-icon" @click="$router.back()" name="cross" size="18" />
-    </van-nav-bar>
-    <!-- 回退图标
+       <!-- 回退图标
+       用户
     后退： this.$router.back()
      -->
+    <van-icon slot="left" class="top-icon" @click="$router.back()" name="cross" size="18" />
+    </van-nav-bar>
 
     <!-- /顶部标题 -->
     <!-- form表单 -->
@@ -109,6 +110,9 @@ export default {
         const res = await userLoginAPI(user)
         console.log('登录成功', res)
         this.$toast.success('登录成功')
+        // 跳转mine页面
+        // this.$router.back()//或者回退
+        this.$router.push('/mine')
         // 登录成功改变发送验证码按钮状态
         this.isCountShow = false
         // vuex 存储user数据
