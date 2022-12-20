@@ -39,6 +39,7 @@ export default {
 
 <style scoped lang='less'>
   .layout-tabbar{
+    height: 103px;
     i.toutiao{
       font-size: 40px;
     }

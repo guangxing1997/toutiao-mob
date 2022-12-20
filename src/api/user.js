@@ -7,7 +7,7 @@ export const userLogin = data => request({
 export const sendVC = mobile => request({
   url: `/v1_0/sms/codes/${mobile}`
 })
-export const getInfo = Authorization => request({
+export const getInfo = () => request({
   url: '/v1_0/user'
   // 发送请求头数据
   // vue组件中用this.$store  js文件中 引入store store.
@@ -16,4 +16,8 @@ export const getInfo = Authorization => request({
   // headers: {
   //   Authorization: `Bearer ${store.state.user.token}`
   // }
+})
+// 获取用户的频道列表
+export const getUserChannel = () => request({
+  url: '/v1_0/user/channels'
 })

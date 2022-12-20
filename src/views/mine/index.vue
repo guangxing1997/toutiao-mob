@@ -120,6 +120,11 @@ export default {
           // 因为vuex数据同步，清除vuex数据即改变状态
           // this.$router.push('/login')
         })
+        // 不添加此方法报错
+        .catch(() => {
+          // on cancel
+          // console.log('取消退出登录')
+        })
     }
   }
 }

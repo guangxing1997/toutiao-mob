@@ -8,7 +8,9 @@ export default new Vuex.Store({
   state: {
     //  用户的登录状态信息
     // user: null
-    user: getItem(TOKEN)
+    user: getItem(TOKEN),
+    // 用户未登录频道
+    perChannerls: []
   },
   getters: {
   },
