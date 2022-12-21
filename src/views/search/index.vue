@@ -8,6 +8,7 @@
       <van-search
         v-model="stext"
         show-action
+        clearable
         placeholder="请输入搜索关键词"
         background="#3296fa"
         @search="onSearch"
@@ -95,6 +96,13 @@ export default {
   padding-top: 103px;
   .van-search__action{
     color: #fff;
+  }
+  // 点击搜索框清空按钮不生效
+  /deep/.van-icon-clear{
+    position: relative;
+    // z-index: 5;
+    right: 12px;
+    font-size: 28px !important;
   }
   .sea-form{
     position: fixed;
