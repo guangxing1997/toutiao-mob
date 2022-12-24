@@ -21,3 +21,42 @@ export const getInfo = () => request({
 export const getUserChannel = () => request({
   url: '/v1_0/user/channels'
 })
+// 取消关注用户
+export const cancelFocus = target => request({
+  method: 'DELETE',
+  url: `/v1_0/user/followings/${target}`
+})
+// 关注用户
+export const addFocus = target => request({
+  method: 'POST',
+  url: '/v1_0/user/followings',
+  data: {
+    target
+  }
+})
+// 取消收藏文章
+export const cancelCol = target => request({
+  method: 'DELETE',
+  url: `/v1_0/article/collections/${target}`
+})
+// 收藏文章
+export const addCol = target => request({
+  method: 'POST',
+  url: '/v1_0/article/collections',
+  data: {
+    target
+  }
+})
+// 取消点赞文章
+export const cancelLike = target => request({
+  method: 'DELETE',
+  url: `/v1_0/article/likings/${target}`
+})
+// 点赞文章
+export const addLike = target => request({
+  method: 'POST',
+  url: '/v1_0/article/likings',
+  data: {
+    target
+  }
+})

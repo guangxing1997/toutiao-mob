@@ -1,8 +1,19 @@
 // 封装请求
 import axios from 'axios'
 import store from '@/store'
+import jsonBig from 'json-bigint'
 const request = axios.create({
-  baseURL: 'http://toutiao.itheima.net'
+  baseURL: 'http://toutiao.itheima.net',
+  // transformResponse 允许自定义原始的响应数据（字符串）
+  transformResponse: [function (data) {
+    try {
+      // 如果转换成功则返回转换的数据结果
+      return jsonBig.parse(data)
+    } catch (err) {
+      // 其他数据的话，直接原样返回
+      return data
+    }
+  }]
 })
 // 添加请求拦截器
 // request 为axios实例对象
@@ -19,4 +30,5 @@ request.interceptors.request.use(function (config) {
   // 对请求错误做些什么
   return Promise.reject(error)
 })
+
 export default request

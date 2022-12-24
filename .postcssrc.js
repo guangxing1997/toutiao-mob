@@ -36,7 +36,8 @@ module.exports = {
       },
 
       // rootValue: 75,
-
+      // 配置不做单位转换的资源文件名
+      exclude: 'github-markdown',
       // 配置要转换的 CSS 属性
       // * 表示所有
       propList: ['*']

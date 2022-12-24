@@ -45,6 +45,14 @@ const routes = [
     component: () => import('@/views/search')
   },
   {
+    // /article/... 时影响图片加载
+    path: '/arti/:articleId',
+    name: 'arti',
+    component: () => import('@/views/article'),
+    // 将路由动态参数映射到组件的 props 中，更推荐这种做法
+    props: true
+  },
+  {
     path: '*',
     component: () => import('@/views/notfound')
   }

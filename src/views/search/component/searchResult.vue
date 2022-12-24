@@ -8,7 +8,16 @@
         finished-text="没有更多了"
         @load="onLoad"
       >
-        <van-cell v-for="item in list" :key="item.art_id" :title="item.title" />
+        <van-cell
+        v-for="item in list"
+        :key="item.art_id"
+        :title="item.title"
+        :to="{
+          name: 'arti',
+          params: {
+            articleId: item.art_id
+          }
+        }"/>
       </van-list>
   </div>
 </template>
