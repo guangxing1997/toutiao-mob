@@ -60,3 +60,20 @@ export const addLike = target => request({
     target
   }
 })
+// 获取用户个人信息
+export const getUserProfile = () => request({
+  method: 'GET',
+  url: '/v1_0/user/profile'
+})
+// 更新用户个人信息
+export const updateUserProfile = data => request({
+  method: 'PATCH',
+  url: '/v1_0/user/profile',
+  data
+})
+// 更新用户头像
+export const updateUserPhoto = data => request({
+  method: 'PATCH',
+  url: '/v1_0/user/photo',
+  data
+})

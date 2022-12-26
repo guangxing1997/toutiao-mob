@@ -53,6 +53,12 @@ const routes = [
     props: true
   },
   {
+    // /article/... 时影响图片加载
+    path: '/user/userProfile',
+    name: 'userProfile',
+    component: () => import('@/views/userProfile')
+  },
+  {
     path: '*',
     component: () => import('@/views/notfound')
   }

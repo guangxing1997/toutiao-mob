@@ -1,4 +1,4 @@
-import { userLogin, sendVC, getInfo, getUserChannel, cancelFocus, addFocus, cancelCol, addCol, cancelLike, addLike } from './user'
+import { userLogin, sendVC, getInfo, getUserChannel, cancelFocus, addFocus, cancelCol, addCol, cancelLike, addLike, getUserProfile, updateUserProfile, updateUserPhoto } from './user'
 import { getArtByChan, getArtById } from './article'
 import { getRecoChan, syncPerChan, remPerChan } from './channel'
 import { getSuggestions, getResultBykw } from './search'
@@ -24,3 +24,6 @@ export const getCommentsAPI = getComments
 export const addCommentLikeAPI = addCommentLike
 export const deleteCommentLikeAPI = deleteCommentLike
 export const addCommentAPI = addComment
+export const getUserProfileAPI = getUserProfile
+export const updateUserProfileAPI = updateUserProfile
+export const updateUserPhotoAPI = updateUserPhoto

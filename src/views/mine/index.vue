@@ -26,7 +26,12 @@
           </div>
           <!-- 右侧btn -->
           <div class="rightSide">
-            <van-button class="change-btn" round type="default" size="mini">
+            <van-button
+            class="change-btn"
+            round
+            to="/user/userProfile"
+            type="default"
+            size="mini">
               <span>编辑资料</span>
             </van-button>
           </div>
